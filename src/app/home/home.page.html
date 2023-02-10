@@ -20,6 +20,7 @@
   </ion-header>
   
   <ion-list>
-    <app-message *ngFor="let message of getMessages()" [message]="message"></app-message>
+    <!-- <app-message *ngFor="let annonce of getAnnonces()" [annonce]="annonce"></app-message> -->
+    <ion-item *ngFor="let annonce of getAnnonces()">{{annonce.titre}} - {{annonce.prix}} €</ion-item>
   </ion-list>
 </ion-content>
