@@ -14,69 +14,75 @@ export interface Annonce {
   titre: string;
   prix: number;
   description: string;
+  superficie: number;
+  nbPieces: number;
+  chauffage: string;
+  ascenseur: boolean;
+  piscine: boolean;
+  jardin: boolean;
 }
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-  public messages: Message[] = [
-    {
-      fromName: 'Matt Chorsey',
-      subject: 'New event: Trip to Vegas',
-      date: '9:32 AM',
-      id: 0,
-      read: false
-    },
-    {
-      fromName: 'Lauren Ruthford',
-      subject: 'Long time no chat',
-      date: '6:12 AM',
-      id: 1,
-      read: false
-    },
-    {
-      fromName: 'Jordan Firth',
-      subject: 'Report Results',
-      date: '4:55 AM',
-      id: 2,
-      read: false
-    }
-  ];
 
   public annonces: Annonce[] = [
     {
       id: 0,
-      image: "",
+      image: "../assets/img/appartement.jpg",
       titre: "Très bel appartement T3 - vue moselle",
       prix: 250000,
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices congue porta. Fusce in arcu a purus tempus congue. Mauris at imperdiet diam, quis varius dolor. Nullam rhoncus diam lectus, eu elementum urna tincidunt sed. Nunc feugiat et augue at condimentum. Maecenas pharetra, neque vel ultrices finibus, dui nisi facilisis mauris, ac suscipit nulla turpis ut orci. Phasellus iaculis elit elit, vel commodo velit pellentesque vitae"
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices congue porta. Fusce in arcu a purus tempus congue. Mauris at imperdiet diam, quis varius dolor. Nullam rhoncus diam lectus, eu elementum urna tincidunt sed. Nunc feugiat et augue at condimentum. Maecenas pharetra, neque vel ultrices finibus, dui nisi facilisis mauris, ac suscipit nulla turpis ut orci. Phasellus iaculis elit elit, vel commodo velit pellentesque vitae",
+      superficie: 120,
+      nbPieces: 3,
+      chauffage: "collectif",
+      ascenseur: true,
+      piscine: false,
+      jardin: false
     },
     {
       id: 1,
-      image: "",
+      image: "../assets/img/maison.jpg",
       titre: "Maison familiale T5 idéal famille, quartier calme",
       prix: 500000,
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices congue porta. Fusce in arcu a purus tempus congue. Mauris at imperdiet diam, quis varius dolor. Nullam rhoncus diam lectus, eu elementum urna tincidunt sed. Nunc feugiat et augue at condimentum. Maecenas pharetra, neque vel ultrices finibus, dui nisi facilisis mauris, ac suscipit nulla turpis ut orci. Phasellus iaculis elit elit, vel commodo velit pellentesque vitae"
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices congue porta. Fusce in arcu a purus tempus congue. Mauris at imperdiet diam, quis varius dolor. Nullam rhoncus diam lectus, eu elementum urna tincidunt sed. Nunc feugiat et augue at condimentum. Maecenas pharetra, neque vel ultrices finibus, dui nisi facilisis mauris, ac suscipit nulla turpis ut orci. Phasellus iaculis elit elit, vel commodo velit pellentesque vitae",
+      superficie: 120,
+      nbPieces: 5,
+      chauffage: "individuel gaz",
+      ascenseur: false,
+      piscine: true,
+      jardin: true
     },
     {
       id: 2,
-      image: "",
+      image: "../assets/img/immeuble.jpg",
       titre: "Investissement locatif : immeuble de rapport - 18 bails en cours",
       prix: 2500000,
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices congue porta. Fusce in arcu a purus tempus congue. Mauris at imperdiet diam, quis varius dolor. Nullam rhoncus diam lectus, eu elementum urna tincidunt sed. Nunc feugiat et augue at condimentum. Maecenas pharetra, neque vel ultrices finibus, dui nisi facilisis mauris, ac suscipit nulla turpis ut orci. Phasellus iaculis elit elit, vel commodo velit pellentesque vitae"
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices congue porta. Fusce in arcu a purus tempus congue. Mauris at imperdiet diam, quis varius dolor. Nullam rhoncus diam lectus, eu elementum urna tincidunt sed. Nunc feugiat et augue at condimentum. Maecenas pharetra, neque vel ultrices finibus, dui nisi facilisis mauris, ac suscipit nulla turpis ut orci. Phasellus iaculis elit elit, vel commodo velit pellentesque vitae",
+      superficie: 1200,
+      nbPieces: 34,
+      chauffage: "collectif fioul",
+      ascenseur: true,
+      piscine: false,
+      jardin: false
+    },
+    {
+      id: 3,
+      image: "../assets/img/hotelparticulier.jpg",
+      titre: "Magnifique Hotel particulier, tout confort",
+      prix: 12000000,
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices congue porta. Fusce in arcu a purus tempus congue. Mauris at imperdiet diam, quis varius dolor. Nullam rhoncus diam lectus, eu elementum urna tincidunt sed. Nunc feugiat et augue at condimentum. Maecenas pharetra, neque vel ultrices finibus, dui nisi facilisis mauris, ac suscipit nulla turpis ut orci. Phasellus iaculis elit elit, vel commodo velit pellentesque vitae",
+      superficie: 600,
+      nbPieces: 16,
+      chauffage: "individuel gaz",
+      ascenseur: true,
+      piscine: true,
+      jardin: true
     }
   ]
 
   constructor() { }
-
-  public getMessages(): Message[] {
-    return this.messages;
-  }
-
-  public getMessageById(id: number): Message {
-    return this.messages[id];
-  }
 
   public getAnnonces(): Annonce[] {
       return this.annonces;
