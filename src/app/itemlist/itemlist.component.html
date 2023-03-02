@@ -1,8 +1,8 @@
-<ion-card>
-  <img alt="Silhouette of mountains" [src]="image" />
+<ion-card *ngIf="annonce" [routerLink]="['/view-annonce/' + annonce.id]">
+  <img alt="Silhouette of mountains" [src]="annonce.image" />
   <ion-card-header>
-    <ion-card-title>{{titre}}</ion-card-title>
-    <ion-card-subtitle>{{prix}} €</ion-card-subtitle>
+    <ion-card-title>{{annonce.titre}}</ion-card-title>
+    <ion-card-subtitle>{{annonce.prix}} €</ion-card-subtitle>
   </ion-card-header>
 
 <!--  <ion-card-content>-->

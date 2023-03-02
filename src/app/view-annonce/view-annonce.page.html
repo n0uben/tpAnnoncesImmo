@@ -1,9 +1,22 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>viewAnnonce</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button [text]="getBackButtonText()" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>L'annonce en détail</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h1>{{annonce.titre}}</h1>
+        <p>{{annonce.description}}</p>
+      </ion-col>
+      <ion-col>
+        <img [src]="annonce.image">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import {Annonce} from "../services/data.service";
 
 @Component({
   selector: 'app-itemlist',
@@ -7,9 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ItemlistComponent implements OnInit {
 
-  @Input() titre?: string;
-  @Input() prix?: number;
-  @Input() image?: string;
+  @Input() annonce?: Annonce;
 
   constructor() { }
 

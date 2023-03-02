@@ -22,7 +22,7 @@
   <ion-grid>
     <ion-row>
       <ion-col size-xl="4" size-sm="6" size-xs="12" *ngFor="let annonce of getAnnonces()">
-        <app-itemlist [titre]="annonce.titre" [prix]="annonce.prix" [image]="annonce.image"></app-itemlist>
+        <app-itemlist [annonce]="annonce"></app-itemlist>
       </ion-col>
     </ion-row>
   </ion-grid>

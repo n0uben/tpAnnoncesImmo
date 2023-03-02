@@ -12,7 +12,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'view-annonce',
+    path: 'view-annonce/:id',
     loadChildren: () => import('./view-annonce/view-annonce.module').then( m => m.ViewAnnoncePageModule)
   }
 ];
