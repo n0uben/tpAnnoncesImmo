@@ -10,12 +10,18 @@
 <ion-content>
   <ion-grid>
     <ion-row>
-      <ion-col>
-        <h1>{{annonce.titre}}</h1>
-        <p>{{annonce.description}}</p>
-      </ion-col>
-      <ion-col>
+      <ion-col size-md="6" size-sm="12" size-xs="12" >
         <img [src]="annonce.image">
+      </ion-col>
+      <ion-col size-md="6" size-sm="12" size-xs="12">
+        <h1>{{annonce.titre}}</h1>
+        <h2 style="color: grey">{{annonce.prix}} €</h2>
+        <p>Superficie : {{annonce.superficie}} m2 / Nombre de pièces : {{annonce.nbPieces}}</p>
+        <p>Chauffage : {{annonce.chauffage}}</p>
+        <p *ngIf="annonce.ascenseur">Ascenseur</p>
+        <p *ngIf="annonce.piscine">Piscine</p>
+        <p *ngIf="annonce.jardin">Jardin : {{annonce.superficieJardin}} m2</p>
+        <p>{{annonce.description}}</p>
       </ion-col>
     </ion-row>
   </ion-grid>

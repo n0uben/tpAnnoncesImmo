@@ -20,6 +20,7 @@ export interface Annonce {
   ascenseur: boolean;
   piscine: boolean;
   jardin: boolean;
+  superficieJardin: number;
 }
 
 @Injectable({
@@ -39,7 +40,8 @@ export class DataService {
       chauffage: "collectif",
       ascenseur: true,
       piscine: false,
-      jardin: false
+      jardin: false,
+      superficieJardin: 0
     },
     {
       id: 1,
@@ -52,7 +54,8 @@ export class DataService {
       chauffage: "individuel gaz",
       ascenseur: false,
       piscine: true,
-      jardin: true
+      jardin: true,
+      superficieJardin: 1500
     },
     {
       id: 2,
@@ -65,7 +68,8 @@ export class DataService {
       chauffage: "collectif fioul",
       ascenseur: true,
       piscine: false,
-      jardin: false
+      jardin: false,
+      superficieJardin: 0
     },
     {
       id: 3,
@@ -78,7 +82,8 @@ export class DataService {
       chauffage: "individuel gaz",
       ascenseur: true,
       piscine: true,
-      jardin: true
+      jardin: true,
+      superficieJardin: 500
     }
   ]
 

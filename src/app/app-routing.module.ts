@@ -14,6 +14,10 @@ const routes: Routes = [
   {
     path: 'view-annonce/:id',
     loadChildren: () => import('./view-annonce/view-annonce.module').then( m => m.ViewAnnoncePageModule)
+  },
+  {
+    path: 'view-annonce',
+    redirectTo: 'home',
   }
 ];
 
